@@ -45,6 +45,7 @@ class EmojiGame extends Component {
       this.setState({topScore: score})
     }
     this.setState({score: 0})
+    this.setState({clickedEmojis: []})
     this.setState({isGameRunning: true})
   }
 

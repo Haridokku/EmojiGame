@@ -50,15 +50,17 @@ class EmojiGame extends Component {
   }
 
   changeEmoji = id => {
-    const {clickedEmojis} = this.state
+    const {clickedEmojis, score} = this.state
     const checking = clickedEmojis.every(each => each !== id)
-
     if (checking) {
       this.setState(prevState => ({
         clickedEmojis: [...prevState.clickedEmojis, id],
       }))
       this.setState(prevState => ({score: prevState.score + 1}))
     } else {
+      this.setState({isGameRunning: false})
+    }
+    if (score === 11) {
       this.setState({isGameRunning: false})
     }
   }

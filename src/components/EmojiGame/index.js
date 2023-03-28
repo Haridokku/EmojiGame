@@ -69,7 +69,7 @@ class EmojiGame extends Component {
     const {score, topScore, isGameRunning} = this.state
     return (
       <div className="app-container">
-        <NavBar score={score} topScore={topScore} />
+        <NavBar score={score} topScore={topScore} isGameRunning={isGameRunning} />
         {isGameRunning ? (
           this.displayEmojis()
         ) : (
